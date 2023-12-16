@@ -31,9 +31,7 @@ public class SelectionOfSort : MonoBehaviour
 
             if (array[minIndex] == array[i])
                 continue;
-            int temp = array[i];
-            array[i] = array[minIndex];
-            array[minIndex] = temp;
+            (array[i], array[minIndex]) = (array[minIndex], array[i]);
         }
         return array;
     }
